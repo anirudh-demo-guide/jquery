@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+          
+            $("#show").click(function () {
+                      $("p").show(); 
+            }); 
+            $("#hide").click(function () {
+                      $("p").hide(); 
+            }); 
+                                
+            //Mouse over
+            $("#p1").mouseenter(function(){
+                $(this).css("background-color", "red");
+            });
+
+            //hover
+            $("#p1").hover(function(){
+                $(this).css("background-color", "yellow");
+            });
+
+                
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <button id="show" >Show</button>
+    <button id="hide" >hide</button>
+    <p id="p1">This is paragraph</p>
+
+</body>
+
+</html>

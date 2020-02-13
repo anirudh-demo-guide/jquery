@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $(document).ready(function () {
+                $("button").click(function () {
+                    $("#left-panel").slideToggle();
+
+                    var txt1 = "<p>Text.</p>";               // Create element with HTML 
+                     var txt2 = $("<p></p>").text("Text.");   // Create with jQuery
+                    var txt3 = document.createElement("p");  // Create with DOM  
+                    txt3.innerHTML = "Text.";
+                    $("#page2").append(txt1, txt2, txt3);
+                    $("#page2").css({"height": "+=100"});
+                    // //
+                    // $("#div1").fadeOut();
+                    // $("#div2").fadeOut("slow");
+                    // $("#div3").fadeOut(3000);
+                });
+            });
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <button>add elements</button>
+    <div id="page" style="height: 100px; background: maroon;border: 3px solid;">
+        <h1>This is div 1</h1>
+    </div>
+    <div id="page2" style="height: 100px; background: gray;">
+        <h1>This is div 2</h1>
+    </div>
+           
+  
+      
+
+</body>
+
+</html>

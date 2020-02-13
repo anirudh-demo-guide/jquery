@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<style>
+.with-border{
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.with-border-2{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+</style>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $(document).ready(function () {
+               //   $("div").siblings().css({"background-color":"gray"});
+               //  $("div").first().css({"background-color":"yellow"}); 
+               //  $("div").last().css({"background-color":"gray"});
+                $("div").eq(2).css({"background-color":"gray"});
+            });
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+   
+  
+<div class="container">
+  <div class="with-border">
+      <p>
+          First
+      </p>
+      <div class="with-border-2"><p>
+          Second
+        </p>
+
+  </div>
+
+  <div class="with-border-2"><p>
+    another Sibling
+  </p>
+
+</div>
+  
+</div>
+      
+
+</body>
+
+</html>

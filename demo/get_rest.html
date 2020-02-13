@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<style>
+ td, th{
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.with-border-2{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+</style>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function(){
+
+                $.get("http://dummy.restapiexample.com/api/v1/employees",function(data,status){
+                console.log(data.status);
+                data.data.forEach(element => {
+                    console.log(element.employee_name);
+                    $("#empl_table").append("<tr><td>" + element.employee_name + "</td></tr>" );
+                });
+           });
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+   
+  
+<div class="container">
+    <button>Get Data</button>
+<table id="empl_table">
+  <th>Employee Name</th>
+
+</table>
+      
+
+</body>
+
+</html>
